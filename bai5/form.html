@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="">
+    <table>
+        <tr>
+            <th colspan="2">
+                <h1>Sở thích của bạn</h1>
+            </th>
+        </tr>
+        <tr>
+            <td>Họ và tên</td>
+            <td>
+                <input type="text" style="width: 200px">
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>Sở thích</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox"> Thể thao
+                        </td>
+                        <td>
+                            <input type="checkbox"> Âm nhạc
+                        </td>
+                        <td>
+                            <input type="checkbox"> Đọc sách
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox"> Lướt web
+                        </td>
+                        <td>
+                            <input type="checkbox"> Chơi game
+                        </td>
+                        <td>
+                            <input type="checkbox"> Điện ảnh
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox"> Du lịch
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button>Gửi thông tin</button>
+                <button type="reset">Nhập lại</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    function checked() {
+        let select = document.querySelectorAll('.form-select')
+        // for(let test = 1; test< select.length; test++) {
+        let test = 2
+        select[test].options[3].selected = 'true';
+        console.log(select[test].value)
+        // select[test].value = select[test].options[3].value
+        // }
+    }
+
+    (function () {
+        this.checked()
+    })()
+</script>
+</body>
+</html>

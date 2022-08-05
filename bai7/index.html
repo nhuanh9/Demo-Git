@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        button {
+            width: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td colspan="4">
+            <input type="text" id="screen">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="inp('(')">(</button>
+        </td>
+        <td>
+            <button onclick="inp(')')">)</button>
+        </td>
+        <td>
+            <button  onclick="inp('%')">%</button>
+        </td>
+        <td>
+            <button onclick="document.getElementById('screen').value = ''">AC</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button  onclick="inp(7)">7</button>
+        </td>
+        <td>
+            <button  onclick="inp(8)">8</button>
+        </td>
+        <td>
+            <button  onclick="inp(9)">9</button>
+        </td>
+        <td>
+            <button  onclick="inp('%')">%</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button  onclick="inp(4)">4</button>
+        </td>
+        <td>
+            <button  onclick="inp(5)">5</button>
+        </td>
+        <td>
+            <button  onclick="inp(6)">6</button>
+        </td>
+        <td>
+            <button  onclick="inp('*')">X</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="inp(1)">1</button>
+        </td>
+        <td>
+            <button onclick="inp(2)">2</button>
+        </td>
+        <td>
+            <button  onclick="inp(3)">3</button>
+        </td>
+        <td>
+            <button  onclick="inp('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button  onclick="inp(0)">0</button>
+        </td>
+        <td>
+            <button  onclick="inp('.')">.</button>
+        </td>
+        <td>
+            <button onclick="document.getElementById('screen').value = eval(document.getElementById('screen').value)">=</button>
+        </td>
+        <td>
+            <button  onclick="inp('+')">+</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function inp(c) {
+        document.getElementById('screen').value += c
+    }
+
+</script>
+</body>
+</html>
