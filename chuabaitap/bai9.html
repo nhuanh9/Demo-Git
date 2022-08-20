@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập a: ");
+    let b = +prompt("Nhập b: ");
+    for (let i = a; i <= b; i++) {
+        document.write(i + ' ');
+    }
+    document.write('<br>')
+    for (let i = a; i <= b; i++) {
+        if (i % 7 == 4) document.write(i + ' ');
+    }
+    document.write('<br>')
+    let sum = 0;
+    for (let i = a; i <= b; i++) {
+        sum += i;
+    }
+    document.write('Tổng từ a đến b là: ' + sum + '<br>');
+    let dem = 0;
+    for (let i = a; i <= b; i++) {
+        if (i % 7 == 4) dem++;
+    }
+    document.write('Số lượng số chia 7 dư 4 từ a đến b là: ' + dem + '<br>');
+    if (a>b) document.write(a*b);
+    else {
+        let mul = 1;
+        for (let i = a; i <= b; i++) {
+            mul *= i;
+        }
+        document.write('Tích từ a đến b là: ' + mul + '<br>');
+    }
+</script>
+</body>
+</html>

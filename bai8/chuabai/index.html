@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ip1">
+<input type="text" id="ip2">
+<input type="text" id="ip3">
+<button onclick="TG()">Ấn</button>
+<h1 id="res"></h1>
+<script>
+    // Câu 1:
+    // alert("Như Anh")
+    //    Câu 2:
+    //     let a = prompt("Nhập vào số đi!");
+    //     alert(a*a);
+    //    Câu 3:
+    // function show() {
+    //     let a = document.getElementById('ip1').value;
+    //     let b = document.getElementById('ip2').value;
+    //     document.getElementById('res').innerHTML = a * b
+    // }
+    //  Câu 4:
+    function hv() {
+        let a = document.getElementById('ip1').value;
+        let cv = a * 4;
+        let dt = a * a;
+        document.getElementById('res').innerHTML = "Chu vi là: " + cv + ", diện tích là: " + dt
+    }
+
+    function ab() {
+        let a = document.getElementById('ip1').value;
+        let b = document.getElementById('ip2').value;
+        let mu2 = a * a;
+        let mub = Math.pow(a, b);
+        document.getElementById('res').innerHTML = "a^2 là: " + mu2 + ", a^b là: " + mub
+    }
+
+    function tongAdenB() {
+        let a = +document.getElementById('ip1').value;
+        let b = +document.getElementById('ip2').value;
+        let tong = (a + b)*(b - a + 1) / 2
+        document.getElementById('res').innerHTML = "Tổng là: " + tong;
+    }
+
+    function tinhTheKy() {
+        let a = +document.getElementById('ip1').value;
+        let theKy = Math.floor(a/100)+1
+        document.getElementById('res').innerHTML = "Thế kỉ là: " + theKy;
+    }
+
+    function TG() {
+        let a1 = +document.getElementById('ip1').value;
+        let a2 = +document.getElementById('ip2').value;
+        let a3 = +document.getElementById('ip3').value;
+        if (a1 > 0 && a2 > 0 && a3 > 0 && a1 + a2 > a3 && a1 + a3 > a2 && a3 + a2 > a1 ) {
+            document.getElementById('res').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác';
+            if ( a1 === a2 || a2 === a3 || a1 === a3 ) {
+                document.getElementById('res').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác cân';
+            } if (a1 == a2 && a1 == a3) {
+                document.getElementById('res').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác đều';
+            } if(a1*a1+ Math.pow(a2 , 2) == Math.pow(a3 , 2) || Math.pow(a1 , 2) + Math.pow(a3 , 2) == Math.pow(a2 , 2) || Math.pow(a3 , 2) + Math.pow(a2 , 2) == Math.pow(a1 , 2)) {
+                document.getElementById('res').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác vuông';
+            }
+        } else {
+            document.getElementById('res').innerHTML = "Không phải tam giác"
+        }
+    }
+</script>
+</body>
+</html>

@@ -71,12 +71,10 @@
 <script>
     function checked() {
         let select = document.querySelectorAll('.form-select')
-        // for(let test = 1; test< select.length; test++) {
-        let test = 2
+        for(let test = 1; test< select.length; test++) {
         select[test].options[3].selected = 'true';
-        console.log(select[test].value)
         // select[test].value = select[test].options[3].value
-        // }
+        }
     }
 
     (function () {

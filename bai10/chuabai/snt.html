@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Số nguyên tố: chỉ chia hết cho 1 và chính no-->
+<script>
+    let dem = 0;
+    let so = 2;
+    while (dem < 20) {
+        let laSNT = true;
+        for (let i = 2; i < so; i++) {
+            if (so%i==0) {
+                laSNT = false;
+                break;
+            }
+        }
+        if (laSNT) {
+            document.write(so+" ")
+            dem++;
+        }
+        so++;
+    }
+
+</script>
+</body>
+</html>
